@@ -2,7 +2,7 @@ package br.com.ieadpe.capacitor.browser;
 /**
  * Simple class to handle indeterminate sequence of events. Not thread safe.
  */
-class IeadpeCapacitorEventGroup {
+class EccCapacitorEventGroup {
 
     interface EventGroupCompletion {
         void onGroupCompletion();
@@ -12,7 +12,7 @@ class IeadpeCapacitorEventGroup {
     private boolean isComplete;
     private EventGroupCompletion completion;
 
-    public IeadpeCapacitorEventGroup(EventGroupCompletion onCompletion) {
+    public EccCapacitorEventGroup(EventGroupCompletion onCompletion) {
         super();
         count = 0;
         isComplete = false;

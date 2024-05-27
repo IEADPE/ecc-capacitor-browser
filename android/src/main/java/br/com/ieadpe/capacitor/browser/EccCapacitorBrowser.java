@@ -48,7 +48,7 @@ public class EccCapacitorBrowser {
     private CustomTabsClient customTabsClient;
     private CustomTabsSession browserSession;
     private boolean isInitialLoad = false;
-    private IeadpeCapacitorEventGroup group;
+    private EccCapacitorEventGroup group;
     private CustomTabsServiceConnection connection = new CustomTabsServiceConnection() {
         @Override
         public void onCustomTabsServiceConnected(ComponentName name, CustomTabsClient client) {
@@ -66,7 +66,7 @@ public class EccCapacitorBrowser {
      */
     public EccCapacitorBrowser(@NonNull Context context) {
         this.context = context;
-        this.group = new IeadpeCapacitorEventGroup(this::handleGroupCompletion);
+        this.group = new EccCapacitorEventGroup(this::handleGroupCompletion);
     }
 
     /**

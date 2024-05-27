@@ -54,9 +54,9 @@ open(options: EccCapacitorBrowserOpenOptions) => Promise<void>
 
 Open a page with the specified options.
 
-| Param         | Type                                                                                            |
-| ------------- | ----------------------------------------------------------------------------------------------- |
-| **`options`** | <code><a href="#ieadpecapacitorbrowseropenoptions">EccCapacitorBrowserOpenOptions</a></code> |
+| Param         | Type                                                                                      |
+| ------------- | ----------------------------------------------------------------------------------------- |
+| **`options`** | <code><a href="#ecccapacitorbrowseropenoptions">EccCapacitorBrowserOpenOptions</a></code> |
 
 **Since:** 1.0.0
 
@@ -130,10 +130,10 @@ addListener(eventName: 'ieadpeBrowserLoggedIn', listenerFunc: (ieadpeDataReturn:
 Android & iOS only: Listen for the url loaded.
 It's fired when the URL from the server is from a redirect-login success
 
-| Param              | Type                                                                                                                               |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
-| **`eventName`**    | <code>'ieadpeBrowserLoggedIn'</code>                                                                                               |
-| **`listenerFunc`** | <code>(ieadpeDataReturn: <a href="#ieadpecapacitorbrowserreturnoptions">EccCapacitorBrowserReturnOptions</a>) =&gt; void</code> |
+| Param              | Type                                                                                                                         |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| **`eventName`**    | <code>'ieadpeBrowserLoggedIn'</code>                                                                                         |
+| **`listenerFunc`** | <code>(ieadpeDataReturn: <a href="#ecccapacitorbrowserreturnoptions">EccCapacitorBrowserReturnOptions</a>) =&gt; void</code> |
 
 **Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
 
