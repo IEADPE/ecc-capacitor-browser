@@ -16,7 +16,7 @@ import androidx.browser.customtabs.*;
  * https://developer.chrome.com/multidevice/android/customtabs for background
  * on how this code works.
  */
-public class IeadpeCapacitorBrowser {
+public class EccCapacitorBrowser {
 
     /**
      * Interface for callbacks for browser events.
@@ -64,7 +64,7 @@ public class IeadpeCapacitorBrowser {
      * Create network browser object.
      * @param context
      */
-    public IeadpeCapacitorBrowser(@NonNull Context context) {
+    public EccCapacitorBrowser(@NonNull Context context) {
         this.context = context;
         this.group = new IeadpeCapacitorEventGroup(this::handleGroupCompletion);
     }

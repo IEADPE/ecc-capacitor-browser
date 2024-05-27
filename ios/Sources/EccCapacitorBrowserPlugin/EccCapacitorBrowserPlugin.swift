@@ -1,10 +1,10 @@
 import Foundation
 import Capacitor
 
-@objc(IeadpeCapacitorBrowserPlugin)
-public class IeadpeCapacitorBrowserPlugin: CAPPlugin, CAPBridgedPlugin {
-    public let identifier = "IeadpeCapacitorBrowserPlugin"
-    public let jsName = "IeadpeCapacitorBrowser"
+@objc(EccCapacitorBrowserPlugin)
+public class EccCapacitorBrowserPlugin: CAPPlugin, CAPBridgedPlugin {
+    public let identifier = "EccCapacitorBrowserPlugin"
+    public let jsName = "EccCapacitorBrowser"
     public let pluginMethods: [CAPPluginMethod] = [
         CAPPluginMethod(name: "open", returnType: CAPPluginReturnPromise),
         CAPPluginMethod(name: "close", returnType: CAPPluginReturnPromise),

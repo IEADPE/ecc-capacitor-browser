@@ -10,15 +10,15 @@ import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 import com.getcapacitor.util.WebColor;
 
-@CapacitorPlugin(name = "IeadpeCapacitorBrowser")
-public class IeadpeCapacitorBrowserPlugin extends Plugin {
+@CapacitorPlugin(name = "EccCapacitorBrowser")
+public class EccCapacitorBrowserPlugin extends Plugin {
 
-    private IeadpeCapacitorBrowser implementation;
+    private EccCapacitorBrowser implementation;
 
-    public static IeadpeCapacitorBrowserControllerListener browserControllerListener;
-    private static IeadpeCapacitorBrowserControllerActivity browserControllerActivityInstance;
+    public static EccCapacitorBrowserControllerListener browserControllerListener;
+    private static EccCapacitorBrowserControllerActivity browserControllerActivityInstance;
 
-    public static void setBrowserControllerListener(IeadpeCapacitorBrowserControllerListener listener) {
+    public static void setBrowserControllerListener(EccCapacitorBrowserControllerListener listener) {
         browserControllerListener = listener;
         if (listener == null) {
             browserControllerActivityInstance = null;
@@ -26,7 +26,7 @@ public class IeadpeCapacitorBrowserPlugin extends Plugin {
     }
 
     public void load() {
-        implementation = new IeadpeCapacitorBrowser(getContext());
+        implementation = new EccCapacitorBrowser(getContext());
         implementation.setBrowserEventListener(this::onBrowserEvent);
     }
 
@@ -61,7 +61,7 @@ public class IeadpeCapacitorBrowserPlugin extends Plugin {
 
         // open the browser and finish
         try {
-            Intent intent = new Intent(getContext(), IeadpeCapacitorBrowserControllerActivity.class);
+            Intent intent = new Intent(getContext(), EccCapacitorBrowserControllerActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             getContext().startActivity(intent);
@@ -85,7 +85,7 @@ public class IeadpeCapacitorBrowserPlugin extends Plugin {
     public void close(PluginCall call) {
         if (browserControllerActivityInstance != null) {
             browserControllerActivityInstance = null;
-            Intent intent = new Intent(getContext(), IeadpeCapacitorBrowserControllerActivity.class);
+            Intent intent = new Intent(getContext(), EccCapacitorBrowserControllerActivity.class);
             intent.putExtra("close", true);
             getContext().startActivity(intent);
         }
@@ -106,13 +106,13 @@ public class IeadpeCapacitorBrowserPlugin extends Plugin {
 
     void onBrowserEvent(int event) {
         switch (event) {
-            case IeadpeCapacitorBrowser.BROWSER_LOADED:
+            case EccCapacitorBrowser.BROWSER_LOADED:
                 notifyListeners("ieadpeBrowserPageLoaded", null);
                 break;
-            case IeadpeCapacitorBrowser.BROWSER_FINISHED:
+            case EccCapacitorBrowser.BROWSER_FINISHED:
                 notifyListeners("ieadpeBrowserFinished", null);
                 break;
-            case IeadpeCapacitorBrowser.BROWSER_LOGGED_IN:
+            case EccCapacitorBrowser.BROWSER_LOGGED_IN:
                 notifyListeners("ieadpeBrowserLoggedIn", null);
                 break;
         }

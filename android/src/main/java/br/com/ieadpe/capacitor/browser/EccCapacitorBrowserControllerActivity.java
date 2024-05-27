@@ -6,7 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 
-public class IeadpeCapacitorBrowserControllerActivity extends Activity {
+public class EccCapacitorBrowserControllerActivity extends Activity {
 
     private boolean isCustomTabsOpen = false;
 
@@ -15,8 +15,8 @@ public class IeadpeCapacitorBrowserControllerActivity extends Activity {
         super.onCreate(savedInstanceState);
         isCustomTabsOpen = false;
 
-        if (IeadpeCapacitorBrowserPlugin.browserControllerListener != null) {
-            IeadpeCapacitorBrowserPlugin.browserControllerListener.onControllerReady(this);
+        if (EccCapacitorBrowserPlugin.browserControllerListener != null) {
+            EccCapacitorBrowserPlugin.browserControllerListener.onControllerReady(this);
         }
     }
 
@@ -39,7 +39,7 @@ public class IeadpeCapacitorBrowserControllerActivity extends Activity {
         }
     }
 
-    public void open(IeadpeCapacitorBrowser implementation, Uri url, Integer toolbarColor) {
+    public void open(EccCapacitorBrowser implementation, Uri url, Integer toolbarColor) {
         implementation.open(url, toolbarColor);
     }
 
@@ -47,6 +47,6 @@ public class IeadpeCapacitorBrowserControllerActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         isCustomTabsOpen = false;
-        IeadpeCapacitorBrowserPlugin.setBrowserControllerListener(null);
+        EccCapacitorBrowserPlugin.setBrowserControllerListener(null);
     }
 }

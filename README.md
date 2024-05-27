@@ -7,7 +7,7 @@ On iOS, this uses `SFSafariViewController` and is compliant with leading OAuth s
 ## Install
 
 ```bash
-npm install @ieadpe/ieadpe-capacitor-browser
+npm install @ieadpe/ecc-capacitor-browser
 npx cap sync
 ```
 
@@ -49,14 +49,14 @@ const openCapacitorSite = async () => {
 ### open(...)
 
 ```typescript
-open(options: IeadpeCapacitorBrowserOpenOptions) => Promise<void>
+open(options: EccCapacitorBrowserOpenOptions) => Promise<void>
 ```
 
 Open a page with the specified options.
 
 | Param         | Type                                                                                            |
 | ------------- | ----------------------------------------------------------------------------------------------- |
-| **`options`** | <code><a href="#ieadpecapacitorbrowseropenoptions">IeadpeCapacitorBrowserOpenOptions</a></code> |
+| **`options`** | <code><a href="#ieadpecapacitorbrowseropenoptions">EccCapacitorBrowserOpenOptions</a></code> |
 
 **Since:** 1.0.0
 
@@ -124,7 +124,7 @@ It is not invoked for any subsequent page loads.
 ### addListener('ieadpeBrowserLoggedIn', ...)
 
 ```typescript
-addListener(eventName: 'ieadpeBrowserLoggedIn', listenerFunc: (ieadpeDataReturn: IeadpeCapacitorBrowserReturnOptions) => void) => Promise<PluginListenerHandle>
+addListener(eventName: 'ieadpeBrowserLoggedIn', listenerFunc: (ieadpeDataReturn: EccCapacitorBrowserReturnOptions) => void) => Promise<PluginListenerHandle>
 ```
 
 Android & iOS only: Listen for the url loaded.
@@ -133,7 +133,7 @@ It's fired when the URL from the server is from a redirect-login success
 | Param              | Type                                                                                                                               |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
 | **`eventName`**    | <code>'ieadpeBrowserLoggedIn'</code>                                                                                               |
-| **`listenerFunc`** | <code>(ieadpeDataReturn: <a href="#ieadpecapacitorbrowserreturnoptions">IeadpeCapacitorBrowserReturnOptions</a>) =&gt; void</code> |
+| **`listenerFunc`** | <code>(ieadpeDataReturn: <a href="#ieadpecapacitorbrowserreturnoptions">EccCapacitorBrowserReturnOptions</a>) =&gt; void</code> |
 
 **Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt;</code>
 
@@ -158,7 +158,7 @@ Remove all native listeners for this plugin.
 ### Interfaces
 
 
-#### IeadpeCapacitorBrowserOpenOptions
+#### EccCapacitorBrowserOpenOptions
 
 Represents the options passed to `open`.
 
@@ -179,7 +179,7 @@ Represents the options passed to `open`.
 | **`remove`** | <code>() =&gt; Promise&lt;void&gt;</code> |
 
 
-#### IeadpeCapacitorBrowserReturnOptions
+#### EccCapacitorBrowserReturnOptions
 
 Represents the options passed to `open`.
 

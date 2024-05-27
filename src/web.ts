@@ -1,8 +1,8 @@
 import {WebPlugin} from '@capacitor/core';
 
-import type {IeadpeCapacitorBrowserPlugin, IeadpeCapacitorBrowserOpenOptions} from './definitions';
+import type {EccCapacitorBrowserPlugin, EccCapacitorBrowserOpenOptions} from './definitions';
 
-export class BrowserWeb extends WebPlugin implements IeadpeCapacitorBrowserPlugin {
+export class BrowserWeb extends WebPlugin implements EccCapacitorBrowserPlugin {
     _lastWindow: Window | null;
 
     constructor() {
@@ -10,7 +10,7 @@ export class BrowserWeb extends WebPlugin implements IeadpeCapacitorBrowserPlugi
         this._lastWindow = null;
     }
 
-    async open(options: IeadpeCapacitorBrowserOpenOptions): Promise<void> {
+    async open(options: EccCapacitorBrowserOpenOptions): Promise<void> {
         this._lastWindow = window.open(options.url, options.windowName || '_blank');
     }
 
@@ -27,6 +27,6 @@ export class BrowserWeb extends WebPlugin implements IeadpeCapacitorBrowserPlugi
     }
 }
 
-const IeadpeCapacitorBrowser = new BrowserWeb();
+const EccCapacitorBrowser = new BrowserWeb();
 
-export {IeadpeCapacitorBrowser};
+export {EccCapacitorBrowser};

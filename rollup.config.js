@@ -4,7 +4,7 @@ export default {
     {
       file: 'dist/plugin.js',
       format: 'iife',
-      name: 'ieadpeCapacitorBrowser',
+      name: 'eccCapacitorBrowser',
       globals: {
         '@capacitor/core': 'capacitorExports',
       },

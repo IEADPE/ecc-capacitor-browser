@@ -1,5 +1,5 @@
 {
-  "name": "@ieadpe/ieadpe-capacitor-browser",
+  "name": "@ieadpe/ecc-capacitor-browser",
   "version": "1.0.22",
   "description": "IEADPE: Capacitor plugin to Open inAppBrowser",
   "main": "dist/plugin.cjs.js",
@@ -13,16 +13,16 @@
     "ios/Sources",
     "ios/Tests",
     "Package.swift",
-    "IeadpeCapacitorBrowser.podspec"
+    "EccCapacitorBrowser.podspec"
   ],
   "author": "Fontos Soluções <ieadpe@ieadpe.com.br>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/IEADPE/ieadpe-capacitor-browser"
+    "url": "https://github.com/IEADPE/ecc-capacitor-browser"
   },
   "bugs": {
-    "url": "https://github.com/IEADPE/ieadpe-capacitor-browser/issues"
+    "url": "https://github.com/IEADPE/ecc-capacitor-browser/issues"
   },
   "keywords": [
     "capacitor",
@@ -34,7 +34,7 @@
     "deploy:release:linux": "npm run build && npm version patch -m \"Upgrade to v%s\" && npm run gh:release",
     "gh:release": "echo -e \"\nLeave blank\nNo\nPublish release\n\" | gh release create 'v'\"$npm_package_version\" --title 'v'\"$npm_package_version\" ",
     "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
-    "verify:ios": "xcodebuild build -scheme IeadpeCapacitorBrowser -sdk iphonesimulator17.5 -destination 'OS=17.5,name=iphonesimulator17.5'",
+    "verify:ios": "xcodebuild build -scheme EccCapacitorBrowser -sdk iphonesimulator17.5 -destination 'OS=17.5,name=iphonesimulator17.5'",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
     "verify:web": "npm run build",
     "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",
@@ -42,12 +42,12 @@
     "eslint": "eslint . --ext ts",
     "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
     "swiftlint": "node-swiftlint",
-    "docgen": "docgen --api IeadpeCapacitorBrowserPlugin --output-readme README.md --output-json dist/docs.json",
+    "docgen": "docgen --api EccCapacitorBrowserPlugin --output-readme README.md --output-json dist/docs.json",
     "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build",
-    "publish:cocoapod": "pod trunk push IeadpeCapacitorBrowser.podspec --allow-warnings"
+    "publish:cocoapod": "pod trunk push EccCapacitorBrowser.podspec --allow-warnings"
   },
   "devDependencies": {
     "@capacitor/android": "^6.0.0",

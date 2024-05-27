@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { IeadpeCapacitorBrowserPlugin } from './definitions';
+import type { EccCapacitorBrowserPlugin } from './definitions';
 
-const IeadpeCapacitorBrowser = registerPlugin<IeadpeCapacitorBrowserPlugin>('IeadpeCapacitorBrowser', {
+const EccCapacitorBrowser = registerPlugin<EccCapacitorBrowserPlugin>('EccCapacitorBrowser', {
   web: () => import('./web').then(m => new m.BrowserWeb()),
 });
 
 export * from './definitions';
-export { IeadpeCapacitorBrowser };
+export { EccCapacitorBrowser };

@@ -1,12 +1,12 @@
 import type {PluginListenerHandle} from '@capacitor/core';
 
-export interface IeadpeCapacitorBrowserPlugin {
+export interface EccCapacitorBrowserPlugin {
     /**
      * Open a page with the specified options.
      *
      * @since 1.0.0
      */
-    open(options: IeadpeCapacitorBrowserOpenOptions): Promise<void>;
+    open(options: EccCapacitorBrowserOpenOptions): Promise<void>;
 
     /**
      * Web & iOS only: Close an open browser window.
@@ -47,7 +47,7 @@ export interface IeadpeCapacitorBrowserPlugin {
      */
     addListener(
         eventName: 'ieadpeBrowserLoggedIn',
-        listenerFunc: (ieadpeDataReturn: IeadpeCapacitorBrowserReturnOptions) => void,
+        listenerFunc: (ieadpeDataReturn: EccCapacitorBrowserReturnOptions) => void,
     ): Promise<PluginListenerHandle>;
 
     /**
@@ -63,7 +63,7 @@ export interface IeadpeCapacitorBrowserPlugin {
  *
  * @since 1.0.0
  */
-export interface IeadpeCapacitorBrowserOpenOptions {
+export interface EccCapacitorBrowserOpenOptions {
     /**
      * The URL to which the browser is opened.
      *
@@ -123,7 +123,7 @@ export interface IeadpeCapacitorBrowserOpenOptions {
  *
  * @since 1.0.0
  */
-export interface IeadpeCapacitorBrowserReturnOptions {
+export interface EccCapacitorBrowserReturnOptions {
     /**
      * The URL the browser was returned with.
      *
