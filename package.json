@@ -1,6 +1,6 @@
 {
   "name": "@ieadpe/ieadpe-capacitor-browser",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "IEADPE: Capacitor plugin to Open inAppBrowser",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
