@@ -1,7 +1,8 @@
 # node files
 dist
 node_modules
-
+.junie
+.idea
 # iOS files
 Pods
 Podfile.lock
